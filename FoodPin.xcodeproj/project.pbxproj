@@ -30,6 +30,7 @@
 		4E6C84F8257882E600896E88 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C84F7257882E600896E88 /* MapViewController.swift */; };
 		4ECBACD0258AEFF500851956 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECBACCF258AEFF500851956 /* RoundedTextField.swift */; };
 		4ECBACD2258AF11400851956 /* NewRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECBACD1258AF11400851956 /* NewRestaurantController.swift */; };
+		4EE6D43D25A6A5690034C7E6 /* RestaurantDetailWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE6D43C25A6A5690034C7E6 /* RestaurantDetailWeatherCell.swift */; };
 		4EE817632541277C008B828E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE817622541277C008B828E /* AppDelegate.swift */; };
 		4EE817652541277C008B828E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE817642541277C008B828E /* SceneDelegate.swift */; };
 		4EE8176A2541277C008B828E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EE817682541277C008B828E /* Main.storyboard */; };
@@ -63,6 +64,7 @@
 		4E6C84F7257882E600896E88 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4ECBACCF258AEFF500851956 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		4ECBACD1258AF11400851956 /* NewRestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantController.swift; sourceTree = "<group>"; };
+		4EE6D43C25A6A5690034C7E6 /* RestaurantDetailWeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailWeatherCell.swift; sourceTree = "<group>"; };
 		4EE8175F2541277C008B828E /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EE817622541277C008B828E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EE817642541277C008B828E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				4E0D3E03256F441700E04A0E /* RestaurantDetailHeaderView.swift */,
 				4E0D3E05256F518100E04A0E /* RestaurantDetailIconTextCell.swift */,
 				4E0D3E07256F527F00E04A0E /* RestaurantDetailTextCell.swift */,
+				4EE6D43C25A6A5690034C7E6 /* RestaurantDetailWeatherCell.swift */,
 				4E6C84F3257877B000896E88 /* RestaurantDetailSeparatorCell.swift */,
 				4E6C84F5257878D900896E88 /* RestaurantDetailMapCell.swift */,
 				4ECBACCF258AEFF500851956 /* RoundedTextField.swift */,
@@ -278,6 +281,7 @@
 				4E5419B42566047000AE2EB4 /* Restaurant.swift in Sources */,
 				4E0D3E06256F518100E04A0E /* RestaurantDetailIconTextCell.swift in Sources */,
 				4E0D3E04256F441700E04A0E /* RestaurantDetailHeaderView.swift in Sources */,
+				4EE6D43D25A6A5690034C7E6 /* RestaurantDetailWeatherCell.swift in Sources */,
 				4E6C84F8257882E600896E88 /* MapViewController.swift in Sources */,
 				4ECBACD2258AF11400851956 /* NewRestaurantController.swift in Sources */,
 				4E3CBE0025539CB1002913BA /* RestaurantDetailViewController.swift in Sources */,

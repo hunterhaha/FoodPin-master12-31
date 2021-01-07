@@ -14,48 +14,55 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     @IBOutlet var headerView: RestaurantDetailHeaderView!
     
     var restaurant = Restaurant()
-
+    
     
     // MARK: - Table view data source
     func numberOfSections(in tableView: UITableView) -> Int {
         1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        6
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
-                    
+            
         case 0:
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailIconTextCell.self), for: indexPath) as! RestaurantDetailIconTextCell
-        cell.iconImageView.image = UIImage(systemName: "phone")?.withTintColor(.black, renderingMode: .alwaysOriginal)
-        cell.shortTextLabel.text = restaurant.phone
-        cell.selectionStyle = .none
-                    
-        return cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailIconTextCell.self), for: indexPath) as! RestaurantDetailIconTextCell
+            cell.iconImageView.image = UIImage(systemName: "phone")?.withTintColor(.black, renderingMode: .alwaysOriginal)
+            cell.shortTextLabel.text = restaurant.phone
+            cell.selectionStyle = .none
+            
+            return cell
         case 1:
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailIconTextCell.self), for: indexPath) as! RestaurantDetailIconTextCell
-        cell.iconImageView.image = UIImage(systemName: "map")?.withTintColor(.black, renderingMode: .alwaysOriginal)
-        cell.shortTextLabel.text = restaurant.location
-        cell.selectionStyle = .none
-                    
-        return cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailIconTextCell.self), for: indexPath) as! RestaurantDetailIconTextCell
+            cell.iconImageView.image = UIImage(systemName: "map")?.withTintColor(.black, renderingMode: .alwaysOriginal)
+            cell.shortTextLabel.text = restaurant.location
+            cell.selectionStyle = .none
+            
+            return cell
+            
         case 2:
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailTextCell.self), for: indexPath) as! RestaurantDetailTextCell
-        cell.descriptionLabel.text = restaurant.summary
-        cell.selectionStyle = .none
-        
-        return cell
-         
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailTextCell.self), for: indexPath) as! RestaurantDetailTextCell
+            cell.descriptionLabel.text = restaurant.summary
+            cell.selectionStyle = .none
+            
+            return cell
+            
         case 3:
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailWeatherCell.self), for: indexPath) as! RestaurantDetailWeatherCell
+            cell.selectionStyle = .none
+            cell.getWeather(location: restaurant.location)
+            return cell
+            
+        case 4:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailSeparatorCell.self), for: indexPath) as! RestaurantDetailSeparatorCell
             cell.titleLabel.text = "HOW TO GET HERE"
             cell.selectionStyle = .none
             
             return cell
             
-        case 4:
+        case 5:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailMapCell.self), for: indexPath) as! RestaurantDetailMapCell
             cell.selectionStyle = .none
             cell.configure(location: restaurant.location)
@@ -63,7 +70,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             return cell
             
         default:
-        fatalError("Failed to instantiate the table view cell for detail view controller")
+            fatalError("Failed to instantiate the table view cell for detail view controller")
         }
     }
     
@@ -80,7 +87,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         headerView.headerImageView.image = UIImage(named: restaurant.image)
         headerView.heartImageView.isHidden = (restaurant.isVisited) ? false : true
         headerView.ratingImageView.image = UIImage(named: restaurant.rating)
-
+        
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -105,10 +112,10 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             self.restaurant.rating = rating
             self.headerView.ratingImageView.image = UIImage(named: rating)
         }
-
-    dismiss(animated: true, completion: nil)
+        
+        dismiss(animated: true, completion: nil)
     }
-
     
-
+    
+    
 }
